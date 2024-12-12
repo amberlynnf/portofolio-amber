@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amber's Portfolio</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F3F1F9;
+            color: #5D4F6E;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            color: #5D4F6E;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background: #aaa6c8;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-bottom: 5px solid #D1C4E9;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            font-weight: 600;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1.3em;
+        }
+
+        /* Navigation */
+        nav {
+            background: #EDE7F6;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #5D4F6E;
+            font-size: 1.1em;
+            margin: 0 25px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #aaa6c8;
+        }
+
+        /* Container */
+        .container {
+            width: 80%;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: #FFFFFF;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section h2 {
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-align: center;
+            color: #5D4F6E;
+        }
+
+        .section p {
+            text-align: center;
+            font-size: 1.1em;
+            color: #7D6B8B;
+        }
+
+        /* About Me Section */
+        .about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .about img {
+            width: 400px;
+            height: 250px;
+            border-radius: 12px;
+            border: 5px solid #aaa6c8;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+
+        .about-text {
+            max-width: 650px;
+            font-size: 1.2em;
+            color: #6C4F78;
+            line-height: 1.7;
+        }
+
+        /* Projects Section */
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .project {
+            flex: 1 1 calc(33.33% - 30px);
+            max-width: calc(33.33% - 30px);
+            background-color: #F3F1F9;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+        }
+
+        .project h3 {
+            color: #5D4F6E;
+            font-size: 1.5em;
+        }
+
+        .project p {
+            color: #7D6B8B;
+            font-size: 1.1em;
+        }
+
+        /* Certificates Section */
+        .certificates {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .certificate {
+            width: 100%;
+            max-width: 320px;
+            background-color: #F3F1F9;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .certificate img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Skills Section */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .skill {
+            padding: 15px 20px;
+            background: #EDE7F6;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Footer */
+        footer {
+            background: #aaa6c8;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            border-top: 5px solid #D1C4E9;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Amber's Portfolio</h1>
+        <p>Web Developer | Creative | Innovative</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <div class="about">
+                <img src="ambers.jpg" alt="Amber's Picture"> <!-- Add your own image here -->
+                <div class="about-text">
+                    <p>I am a highly versatile and innovative individual with a strong foundation in software engineering, interactive media, and web development. My experience spans diverse roles and projects, including programming, user interface development, software architecture, and building web applications using HTML, CSS, PHP, and Laravel. I bring strong technical expertise, creative problem-solving abilities, and a collaborative mindset to every challenge. I am always eager to learn quickly and enjoy working on creative solutions to deliver immersive and engaging digital experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Aplikasi Manajemen Apotek (2024)</h3>
+                    <p>Develop a system to manage drug prescription data and purchase transactions at pharmacies.</p>
+                </div>
+                <div class="project">
+                    <h3>Sistem Data Siswa (2024)</h3>
+                    <p>Creating a web-based system for recording and managing student data in schools.</p>
+                </div>
+                <div class="project">
+                    <h3>Sistem Rental Motor (2024)</h3>
+                    <p>Create applications to manage motorbike rental transactions, customer data, and available fleet.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="section">
+            <h2>Certificate</h2>
+            <div class="certificates">
+                <div class="certificate">
+                    <img src="sertifikat_dicoding.jpg" alt="Certificate 1">
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill">HTML, CSS, JavaScript</div>
+                <div class="skill">PHP & Laravel</div>
+                <div class="skill">Database Management (MySQL & PostgreSQL)</div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:amber4floydd@gmail.com">amber4floydd@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/amber-floyd-900481341/" target="_blank">https://www.linkedin.com/in/amber-floyd-900481341/</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Amber Floyd | Portfolio</p>
+    </footer>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Adjust for navbar height
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
